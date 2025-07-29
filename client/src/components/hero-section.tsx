@@ -105,26 +105,21 @@ export default function HeroSection() {
             initial="hidden"
             animate="visible"
           >
-            <motion.div variants={itemVariants}>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-                Hi all, I'm <span className="gradient-text bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">{portfolioData.name}</span> 👋
+            <motion.div
+              className="text-left mb-8"
+              variants={itemVariants}
+            >
+              <div className="text-blue-400 text-lg font-medium mb-2">I am a</div>
+              <h1 className="text-6xl md:text-8xl font-bold text-white mb-4 leading-tight">
+                {portfolioData.title}
               </h1>
+              <div className="text-2xl md:text-3xl text-slate-300 font-light mb-6">
+                {portfolioData.roleTitle}
+              </div>
+              <div className="text-lg text-slate-400 max-w-2xl leading-relaxed">
+                Enhancing digital experiences that are smooth, scalable, and made to impress.
+              </div>
             </motion.div>
-            
-            <motion.p 
-              className="text-xl md:text-2xl text-blue-200 mb-8 leading-relaxed"
-              variants={itemVariants}
-            >
-              {portfolioData.title}
-            </motion.p>
-            
-            <motion.p 
-              className="text-lg text-slate-300 mb-12 leading-relaxed"
-              variants={itemVariants}
-            >
-              A passionate innovator 🚀 with experience building AI-powered solutions, 
-              leading cross-functional teams, and delivering scalable systems that make a real impact.
-            </motion.p>
 
             {/* Social Links */}
             <motion.div className="flex justify-center lg:justify-start space-x-4 mb-12" variants={itemVariants}>

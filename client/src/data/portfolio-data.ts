@@ -1,6 +1,7 @@
 export const portfolioData = {
   name: "Pathu T",
-  title: "Agentic AI Innovator | Project Manager | Full-Stack Developer",
+  title: "PMO",
+  roleTitle: "Agentic AI Innovator, Backend Developer",
   location: "Coimbatore, Tamil Nadu, India",
   email: "pathuthangamuthu@gmail.com",
   phone: "+91 9524214194",

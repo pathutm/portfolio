@@ -117,46 +117,48 @@ export default function AboutSection() {
             </div>
           </motion.div>
 
-          {/* Skills Section */}
-          <motion.div variants={itemVariants}>
-            <h3 className="text-2xl font-bold text-slate-900 mb-8">Technical Expertise</h3>
-            
-            <div className="space-y-6">
-              {portfolioData.skills.map((skillGroup, index) => (
-                <motion.div 
-                  key={index} 
-                  className="skill-category"
-                  variants={itemVariants}
-                >
-                  <h4 className="text-lg font-semibold text-slate-700 mb-3">{skillGroup.category}</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {skillGroup.items.map((skill, skillIndex) => {
-                      const IconComponent = techIcons[skill as keyof typeof techIcons];
-                      return (
-                        <motion.span
-                          key={skillIndex}
-                          className="skill-badge flex items-center gap-2"
-                          data-testid={`skill-${skill.toLowerCase().replace(/\s+/g, '-')}`}
-                          style={{
-                            backgroundColor: skillGroup.color === 'purple' ? 'rgb(243 232 255)' : 
-                                           skillGroup.color === 'blue' ? 'rgb(219 234 254)' : 
-                                           'rgb(209 250 229)',
-                            color: skillGroup.color === 'purple' ? 'rgb(107 33 168)' : 
-                                  skillGroup.color === 'blue' ? 'rgb(30 58 138)' : 
-                                  'rgb(6 78 59)'
-                          }}
-                          whileHover={{ scale: 1.05, y: -2 }}
-                          whileTap={{ scale: 0.95 }}
-                        >
-                          {IconComponent && <IconComponent className="w-4 h-4" />}
-                          {skill}
-                        </motion.span>
-                      );
-                    })}
+          {/* Technical Expertise Cards */}
+          <motion.div variants={itemVariants} className="space-y-6">
+            {portfolioData.skills.map((skillGroup, groupIndex) => (
+              <motion.div 
+                key={groupIndex} 
+                className="expertise-card bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 border border-slate-100 hover:border-blue-200"
+                variants={itemVariants}
+                whileHover={{ y: -5, scale: 1.02 }}
+              >
+                <div className="flex items-center mb-4">
+                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center mr-4 ${
+                    skillGroup.color === 'purple' ? 'bg-gradient-to-br from-purple-100 to-indigo-100' : 
+                    skillGroup.color === 'blue' ? 'bg-gradient-to-br from-blue-100 to-cyan-100' : 
+                    'bg-gradient-to-br from-emerald-100 to-teal-100'
+                  }`}>
+                    <div className={`w-6 h-6 rounded-lg ${
+                      skillGroup.color === 'purple' ? 'bg-purple-500' : 
+                      skillGroup.color === 'blue' ? 'bg-blue-500' : 
+                      'bg-emerald-500'
+                    }`}></div>
                   </div>
-                </motion.div>
-              ))}
-            </div>
+                  <h4 className="text-xl font-bold text-slate-900">{skillGroup.category}</h4>
+                </div>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {skillGroup.items.map((skill, skillIndex) => (
+                    <motion.div
+                      key={skillIndex}
+                      className="flex items-center p-3 rounded-lg bg-slate-50 hover:bg-slate-100 transition-colors duration-200"
+                      whileHover={{ scale: 1.02, x: 5 }}
+                    >
+                      <div className={`w-2 h-2 rounded-full mr-3 ${
+                        skillGroup.color === 'purple' ? 'bg-purple-500' : 
+                        skillGroup.color === 'blue' ? 'bg-blue-500' : 
+                        'bg-emerald-500'
+                      }`}></div>
+                      <span className="text-slate-700 font-medium text-sm">{skill}</span>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
           </motion.div>
         </motion.div>
       </div>

@@ -26,48 +26,52 @@ export default function ExperienceSection() {
           />
         </motion.div>
 
-        {/* Timeline */}
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-blue-500 to-indigo-500 h-full hidden lg:block"></div>
-
+          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-indigo-500 to-purple-500"></div>
+          
           <div className="space-y-12">
-            {portfolioData.experience.map((experience, index) => (
-              <div key={index} className={`relative flex items-center lg:justify-center ${index % 2 === 0 ? '' : 'lg:flex-row-reverse'}`}>
-                <div className="lg:w-1/2 lg:px-8">
-                  <div className={`experience-card bg-gradient-to-br p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 ${index % 2 === 0 ? 'lg:ml-auto lg:text-right' : ''}`}
-                       style={{
-                         background: experience.color === 'blue' ? 'linear-gradient(to bottom right, rgb(239 246 255), rgb(224 231 255))' :
-                                    experience.color === 'emerald' ? 'linear-gradient(to bottom right, rgb(236 253 245), rgb(209 250 229))' :
-                                    'linear-gradient(to bottom right, rgb(255 251 235), rgb(254 243 199))'
-                       }}>
-                    <div className={`absolute lg:hidden w-4 h-4 rounded-full -left-2 top-6`}
-                         style={{backgroundColor: experience.color === 'blue' ? 'rgb(59 130 246)' : experience.color === 'emerald' ? 'rgb(16 185 129)' : 'rgb(245 158 11)'}}></div>
-                    <div className={`hidden lg:block absolute top-6 w-4 h-4 rounded-full ${index % 2 === 0 ? '-right-2' : '-left-2'}`}
-                         style={{backgroundColor: experience.color === 'blue' ? 'rgb(59 130 246)' : experience.color === 'emerald' ? 'rgb(16 185 129)' : 'rgb(245 158 11)'}}></div>
-                    
-                    <span className="text-sm font-medium mb-2 block"
-                          style={{color: experience.color === 'blue' ? 'rgb(37 99 235)' : experience.color === 'emerald' ? 'rgb(5 150 105)' : 'rgb(217 119 6)'}}>
-                      {experience.date}
-                    </span>
-                    <h3 className="text-xl font-bold text-slate-900 mb-1">{experience.role}</h3>
-                    <p className="font-medium mb-4"
-                       style={{color: experience.color === 'blue' ? 'rgb(37 99 235)' : experience.color === 'emerald' ? 'rgb(5 150 105)' : 'rgb(217 119 6)'}}>
-                      {experience.company}
-                    </p>
-                    
-                    <ul className="space-y-2 text-slate-600">
-                      {experience.description.map((item, itemIndex) => (
-                        <li key={itemIndex} className={`flex items-start ${index % 2 === 0 ? 'lg:justify-end' : ''}`}>
-                          <CheckCircle className={`mt-1 w-4 h-4 ${index % 2 === 0 ? 'lg:order-2 lg:ml-2 lg:mr-0' : ''} mr-2`}
-                                      style={{color: experience.color === 'blue' ? 'rgb(59 130 246)' : experience.color === 'emerald' ? 'rgb(16 185 129)' : 'rgb(245 158 11)'}} />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
+            {portfolioData.experience.map((exp, index) => (
+              <motion.div 
+                key={index} 
+                className="relative pl-20"
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+              >
+                {/* Timeline Dot */}
+                <div className="absolute left-6 w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow-lg"></div>
+                
+                {/* Experience Card */}
+                <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-slate-100 hover:border-blue-200">
+                  <div className="flex flex-col lg:flex-row justify-between items-start mb-6">
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-slate-900 mb-2">{exp.role}</h3>
+                      <p className="text-blue-600 font-semibold text-lg mb-2">{exp.company}</p>
+                    </div>
+                    <div className="bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
+                      {exp.date}
+                    </div>
+                  </div>
+                  
+                  <div className="grid gap-3">
+                    {exp.description.map((item, itemIndex) => (
+                      <motion.div 
+                        key={itemIndex} 
+                        className="flex items-start group"
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.4, delay: (index * 0.2) + (itemIndex * 0.1) }}
+                      >
+                        <div className="w-2 h-2 bg-emerald-500 rounded-full mr-4 mt-2 group-hover:scale-125 transition-transform duration-200"></div>
+                        <span className="text-slate-700 leading-relaxed group-hover:text-slate-900 transition-colors duration-200">{item}</span>
+                      </motion.div>
+                    ))}
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
