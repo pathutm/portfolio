@@ -41,7 +41,7 @@ export default function AboutSection() {
   };
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-br from-slate-50 via-white to-blue-50/30 relative overflow-hidden">
+    <section id="about" className="py-16 bg-gradient-to-br from-slate-50 via-white to-blue-50/30 relative overflow-hidden">
       {/* Professional Background Pattern */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-0 left-0 w-full h-full" 
@@ -58,68 +58,72 @@ export default function AboutSection() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">About Me</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">About Me</h2>
           <motion.div 
-            className="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 mx-auto mb-8"
+            className="w-20 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 mx-auto mb-6"
             initial={{ width: 0 }}
-            whileInView={{ width: "6rem" }}
+            whileInView={{ width: "5rem" }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.3 }}
           ></motion.div>
         </motion.div>
 
+        {/* Enhanced Hero Text Section */}
         <motion.div 
-          className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
+          className="text-center max-w-4xl mx-auto mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <motion.div variants={itemVariants}>
-            <h3 className="text-2xl font-bold text-slate-900 mb-6">Building Tomorrow's Technology Today</h3>
-            <div className="prose prose-lg text-slate-600 space-y-4">
-              {portfolioData.about.summary.map((paragraph, index) => (
-                <motion.p 
-                  key={index}
-                  variants={itemVariants}
-                >
-                  {paragraph}
-                </motion.p>
-              ))}
-            </div>
+          <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6 bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
+            Building Tomorrow's Technology Today
+          </h3>
+          <div className="prose prose-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg mb-4">
+              I'm a recent <span className="font-semibold text-slate-800">B.E. graduate in Electrical, Electronics, and Communication Engineering</span> from SNS College of Technology with <span className="font-semibold text-blue-600">11+ months of hands-on experience</span> in backend development, Agentic AI, DevOps, and full-stack product launches.
+            </p>
+            <p className="text-lg mb-4">
+              I've led cross-functional teams, built and deployed <span className="font-semibold text-indigo-600">45+ APIs</span>, and worked with LLMs like LangChain and Gemini. I've managed automation pipelines using n8n and deployed scalable systems on AWS using Docker.
+            </p>
+            <p className="text-lg">
+              I'm now aiming for <span className="font-semibold text-purple-600">Program and Product Management roles</span> that intersect with technology, where I can align people, products, and processes to deliver high-impact solutions.
+            </p>
+          </div>
+        </motion.div>
 
-            {/* Key Stats */}
-            <div className="grid grid-cols-2 gap-6 mt-8">
-              {portfolioData.about.stats.map((stat, index) => (
-                <motion.div 
-                  key={index} 
-                  className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl hover:shadow-lg transition-all duration-300"
-                  variants={itemVariants}
-                  whileHover={{ scale: 1.05, y: -5 }}
-                >
-                  <motion.div 
-                    className="text-3xl font-bold text-blue-600 mb-2"
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                  >
-                    {stat.value}
-                  </motion.div>
-                  <div className="text-slate-600 font-medium">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
+        {/* Stats Section */}
+        <motion.div 
+          className="grid grid-cols-2 md:grid-cols-2 gap-6 max-w-lg mx-auto mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <motion.div 
+            className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl border border-blue-100 hover:shadow-lg transition-all duration-300"
+            whileHover={{ scale: 1.05, y: -3 }}
+          >
+            <div className="text-3xl font-bold text-blue-600 mb-2">45+</div>
+            <div className="text-sm font-medium text-slate-600">APIs Deployed</div>
           </motion.div>
+          <motion.div 
+            className="text-center p-6 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl border border-indigo-100 hover:shadow-lg transition-all duration-300"
+            whileHover={{ scale: 1.05, y: -3 }}
+          >
+            <div className="text-3xl font-bold text-indigo-600 mb-2">11+</div>
+            <div className="text-sm font-medium text-slate-600">Months Experience</div>
+          </motion.div>
+        </motion.div>
 
-          {/* Technical Expertise Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Technical Expertise Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {portfolioData.skills.map((skillGroup, groupIndex) => (
               <motion.div 
                 key={groupIndex} 
@@ -167,8 +171,7 @@ export default function AboutSection() {
                 </div>
               </motion.div>
             ))}
-          </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

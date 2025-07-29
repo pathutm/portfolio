@@ -416,11 +416,11 @@ export default function HeroSection() {
                 />
               ))}
 
-              {/* Floating Decorative Elements */}
+              {/* Floating Decorative Elements - Positioned outside the main container */}
               <motion.div 
-                className="absolute -top-4 -right-4 w-16 h-16 bg-amber-400 rounded-full flex items-center justify-center shadow-lg"
+                className="absolute top-8 right-8 w-12 h-12 bg-amber-400/80 rounded-full flex items-center justify-center shadow-lg"
                 animate={{
-                  y: [0, -10, 0],
+                  y: [0, -8, 0],
                   rotate: [0, 180, 360]
                 }}
                 transition={{
@@ -429,13 +429,13 @@ export default function HeroSection() {
                   ease: "easeInOut"
                 }}
               >
-                <span className="text-2xl">🚀</span>
+                <span className="text-lg">🚀</span>
               </motion.div>
               
               <motion.div 
-                className="absolute -bottom-4 -left-4 w-12 h-12 bg-emerald-400 rounded-full flex items-center justify-center shadow-lg"
+                className="absolute bottom-8 left-8 w-10 h-10 bg-emerald-400/80 rounded-full flex items-center justify-center shadow-lg"
                 animate={{
-                  scale: [1, 1.2, 1],
+                  scale: [1, 1.15, 1],
                   rotate: [0, -180, -360]
                 }}
                 transition={{
@@ -445,7 +445,7 @@ export default function HeroSection() {
                   delay: 1
                 }}
               >
-                <span className="text-lg">⚡</span>
+                <span className="text-sm">⚡</span>
               </motion.div>
             </div>
           </motion.div>

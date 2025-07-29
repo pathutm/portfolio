@@ -16,7 +16,9 @@ export const portfolioData = {
     ],
     stats: [
       { value: "45+", label: "APIs Deployed" },
-      { value: "11+", label: "Months Experience" }
+      { value: "11+", label: "Months Experience" },
+      { value: "15+", label: "Projects Completed" },
+      { value: "5+", label: "Tech Stacks Mastered" }
     ]
   },
 
