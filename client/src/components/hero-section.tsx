@@ -43,7 +43,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 overflow-hidden">
+    <section id="home" className="relative h-screen flex items-center justify-center bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-950/20 via-transparent to-indigo-950/20"></div>
       
       {/* Advanced Background Animation */}
@@ -146,7 +146,7 @@ export default function HeroSection() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-screen">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full py-20">
           {/* Left Column - Animated Text Content */}
           <motion.div 
             className="text-center lg:text-left"
@@ -171,7 +171,7 @@ export default function HeroSection() {
               <div className="text-blue-400 text-xl font-medium mb-4">I am a</div>
               
               {/* Main Animated Title */}
-              <div className="text-7xl md:text-9xl font-bold text-white mb-6 leading-tight">
+              <div className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                 <div className="relative inline-block">
                   <motion.span
                     initial={{ opacity: 0, scale: 0.5 }}
@@ -193,7 +193,7 @@ export default function HeroSection() {
               </div>
               
               {/* Typewriter Effect for Role */}
-              <div className="text-3xl md:text-4xl text-slate-300 font-light mb-8 h-16">
+              <div className="text-2xl md:text-3xl text-slate-300 font-light mb-6 h-12">
                 <Typewriter
                   options={{
                     strings: [
@@ -207,7 +207,6 @@ export default function HeroSection() {
                     loop: true,
                     delay: 75,
                     deleteSpeed: 50,
-                    pauseFor: 2000,
                   }}
                 />
               </div>
@@ -223,15 +222,15 @@ export default function HeroSection() {
               
               {/* Interactive Skills Pills */}
               <motion.div 
-                className="flex flex-wrap gap-3 mb-8"
+                className="flex flex-wrap gap-2 mb-6"
                 variants={itemVariants}
               >
                 {['AI/ML', 'MERN Stack', 'AWS', 'Docker', 'LangChain'].map((skill, index) => (
                   <motion.span
                     key={skill}
-                    className="px-4 py-2 bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm border border-slate-600/30 rounded-full text-slate-300 text-sm font-medium"
+                    className="px-3 py-1 bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm border border-slate-600/30 rounded-full text-slate-300 text-xs font-medium"
                     whileHover={{ 
-                      scale: 1.1, 
+                      scale: 1.05, 
                       backgroundColor: "rgba(59, 130, 246, 0.1)",
                       borderColor: "rgba(59, 130, 246, 0.3)"
                     }}
@@ -247,7 +246,7 @@ export default function HeroSection() {
             </motion.div>
 
             {/* Social Links */}
-            <motion.div className="flex justify-center lg:justify-start space-x-4 mb-12" variants={itemVariants}>
+            <motion.div className="flex justify-center lg:justify-start space-x-3 mb-8" variants={itemVariants}>
               <motion.a
                 href={portfolioData.github}
                 target="_blank"
@@ -303,10 +302,10 @@ export default function HeroSection() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            <div className="relative w-96 h-96 flex items-center justify-center">
+            <div className="relative w-80 h-80 flex items-center justify-center">
               {/* Central Core */}
               <motion.div
-                className="absolute w-32 h-32 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 shadow-2xl"
+                className="absolute w-24 h-24 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 shadow-2xl"
                 animate={{
                   rotate: [0, 360],
                   scale: [1, 1.1, 1],
@@ -316,25 +315,25 @@ export default function HeroSection() {
                   scale: { duration: 4, repeat: Infinity, ease: "easeInOut" }
                 }}
               >
-                <div className="absolute inset-4 rounded-full bg-gradient-to-tr from-white/20 to-transparent backdrop-blur-sm flex items-center justify-center">
-                  <Brain className="w-12 h-12 text-white" />
+                <div className="absolute inset-3 rounded-full bg-gradient-to-tr from-white/20 to-transparent backdrop-blur-sm flex items-center justify-center">
+                  <Brain className="w-8 h-8 text-white" />
                 </div>
               </motion.div>
 
               {/* Orbiting Elements */}
               {[
-                { icon: FaCode, color: "from-blue-400 to-blue-600", delay: 0, radius: 120 },
-                { icon: Database, color: "from-indigo-400 to-indigo-600", delay: 2, radius: 140 },
-                { icon: FaServer, color: "from-purple-400 to-purple-600", delay: 4, radius: 100 },
-                { icon: Cpu, color: "from-emerald-400 to-emerald-600", delay: 1, radius: 160 },
-                { icon: FaCloud, color: "from-cyan-400 to-cyan-600", delay: 3, radius: 90 },
-                { icon: Zap, color: "from-amber-400 to-amber-600", delay: 5, radius: 180 }
+                { icon: FaCode, color: "from-blue-400 to-blue-600", delay: 0, radius: 80 },
+                { icon: Database, color: "from-indigo-400 to-indigo-600", delay: 2, radius: 90 },
+                { icon: FaServer, color: "from-purple-400 to-purple-600", delay: 4, radius: 70 },
+                { icon: Cpu, color: "from-emerald-400 to-emerald-600", delay: 1, radius: 100 },
+                { icon: FaCloud, color: "from-cyan-400 to-cyan-600", delay: 3, radius: 60 },
+                { icon: Zap, color: "from-amber-400 to-amber-600", delay: 5, radius: 110 }
               ].map((item, index) => {
                 const IconComponent = item.icon;
                 return (
                   <motion.div
                     key={index}
-                    className={`absolute w-16 h-16 rounded-2xl bg-gradient-to-br ${item.color} shadow-lg flex items-center justify-center backdrop-blur-sm border border-white/20`}
+                    className={`absolute w-12 h-12 rounded-lg bg-gradient-to-br ${item.color} shadow-lg flex items-center justify-center backdrop-blur-sm border border-white/20`}
                     animate={{
                       rotate: [0, 360],
                       x: [
@@ -353,7 +352,7 @@ export default function HeroSection() {
                     }}
                     whileHover={{ scale: 1.2, zIndex: 10 }}
                   >
-                    <IconComponent className="w-8 h-8 text-white" />
+                    <IconComponent className="w-5 h-5 text-white" />
                   </motion.div>
                 );
               })}
