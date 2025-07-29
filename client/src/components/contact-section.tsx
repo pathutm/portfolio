@@ -60,20 +60,24 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
-      <div className="absolute inset-0 bg-black/20"></div>
-      
-      {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-float" style={{animationDelay: '-3s'}}></div>
+    <section id="contact" className="py-20 bg-gradient-to-br from-slate-50 via-white to-blue-50/30 relative overflow-hidden">
+      {/* Professional Background Elements */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-0 left-0 w-full h-full" 
+             style={{
+               backgroundImage: `radial-gradient(circle at 25px 25px, rgba(59, 130, 246, 0.1) 2px, transparent 2px)`,
+               backgroundSize: '50px 50px'
+             }}>
+        </div>
       </div>
+      <div className="absolute top-20 right-20 w-32 h-32 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-full blur-3xl opacity-40"></div>
+      <div className="absolute bottom-20 left-20 w-24 h-24 bg-gradient-to-br from-purple-100 to-blue-100 rounded-full blur-2xl opacity-30"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-slide-up">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Let's Connect</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-indigo-400 mx-auto mb-8"></div>
-          <p className="text-xl text-blue-200 max-w-3xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Let's Connect</h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 mx-auto mb-8"></div>
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             Ready to collaborate on innovative projects or discuss exciting opportunities? I'd love to hear from you!
           </p>
         </div>
@@ -81,43 +85,43 @@ export default function ContactSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Contact Information */}
           <div className="animate-slide-up">
-            <h3 className="text-2xl font-bold text-white mb-8">Get In Touch</h3>
+            <h3 className="text-2xl font-bold text-slate-900 mb-8">Get In Touch</h3>
             
             <div className="space-y-6">
-              <div className="flex items-center space-x-4 p-4 glass-card rounded-xl hover:bg-white/20 transition-all duration-300">
-                <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center">
-                  <Mail className="text-blue-300 w-6 h-6" />
+              <div className="flex items-center space-x-4 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-slate-200">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                  <Mail className="text-blue-600 w-6 h-6" />
                 </div>
                 <div>
-                  <p className="text-white font-medium">Email</p>
-                  <p className="text-blue-200">{portfolioData.email}</p>
+                  <p className="text-slate-900 font-medium">Email</p>
+                  <p className="text-slate-600">{portfolioData.email}</p>
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4 p-4 glass-card rounded-xl hover:bg-white/20 transition-all duration-300">
-                <div className="w-12 h-12 bg-emerald-500/20 rounded-full flex items-center justify-center">
-                  <Phone className="text-emerald-300 w-6 h-6" />
+              <div className="flex items-center space-x-4 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-slate-200">
+                <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
+                  <Phone className="text-emerald-600 w-6 h-6" />
                 </div>
                 <div>
-                  <p className="text-white font-medium">Phone</p>
-                  <p className="text-blue-200">{portfolioData.phone}</p>
+                  <p className="text-slate-900 font-medium">Phone</p>
+                  <p className="text-slate-600">{portfolioData.phone}</p>
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4 p-4 glass-card rounded-xl hover:bg-white/20 transition-all duration-300">
-                <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center">
-                  <MapPin className="text-purple-300 w-6 h-6" />
+              <div className="flex items-center space-x-4 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-slate-200">
+                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
+                  <MapPin className="text-purple-600 w-6 h-6" />
                 </div>
                 <div>
-                  <p className="text-white font-medium">Location</p>
-                  <p className="text-blue-200">{portfolioData.location}</p>
+                  <p className="text-slate-900 font-medium">Location</p>
+                  <p className="text-slate-600">{portfolioData.location}</p>
                 </div>
               </div>
             </div>
 
             {/* Social Links */}
             <div className="mt-8">
-              <h4 className="text-lg font-semibold text-white mb-4">Connect on Social</h4>
+              <h4 className="text-lg font-semibold text-slate-900 mb-4">Connect on Social</h4>
               <div className="flex space-x-4">
                 <motion.a
                   href={portfolioData.linkedin}
@@ -147,18 +151,18 @@ export default function ContactSection() {
 
           {/* Contact Form */}
           <div className="animate-slide-up">
-            <h3 className="text-2xl font-bold text-white mb-8">Send a Message</h3>
+            <h3 className="text-2xl font-bold text-slate-900 mb-8">Send a Message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <Label htmlFor="name" className="text-blue-200 mb-2 block">Name</Label>
+                <Label htmlFor="name" className="text-slate-700 mb-2 block">Name</Label>
                 <Input
                   type="text"
                   id="name"
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  className="w-full bg-white/10 border-white/20 text-white placeholder-blue-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent backdrop-blur-sm"
+                  className="w-full bg-white border-slate-300 text-slate-900 placeholder-slate-500 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   placeholder="Your Name"
                   required
                   data-testid="input-name"
@@ -166,14 +170,14 @@ export default function ContactSection() {
               </div>
 
               <div>
-                <Label htmlFor="email" className="text-blue-200 mb-2 block">Email</Label>
+                <Label htmlFor="email" className="text-slate-700 mb-2 block">Email</Label>
                 <Input
                   type="email"
                   id="email"
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full bg-white/10 border-white/20 text-white placeholder-blue-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent backdrop-blur-sm"
+                  className="w-full bg-white border-slate-300 text-slate-900 placeholder-slate-500 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   placeholder="your.email@example.com"
                   required
                   data-testid="input-email"
@@ -181,14 +185,14 @@ export default function ContactSection() {
               </div>
 
               <div>
-                <Label htmlFor="subject" className="text-blue-200 mb-2 block">Subject</Label>
+                <Label htmlFor="subject" className="text-slate-700 mb-2 block">Subject</Label>
                 <Input
                   type="text"
                   id="subject"
                   name="subject"
                   value={formData.subject}
                   onChange={handleInputChange}
-                  className="w-full bg-white/10 border-white/20 text-white placeholder-blue-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent backdrop-blur-sm"
+                  className="w-full bg-white border-slate-300 text-slate-900 placeholder-slate-500 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   placeholder="What's this about?"
                   required
                   data-testid="input-subject"
@@ -196,14 +200,14 @@ export default function ContactSection() {
               </div>
 
               <div>
-                <Label htmlFor="message" className="text-blue-200 mb-2 block">Message</Label>
+                <Label htmlFor="message" className="text-slate-700 mb-2 block">Message</Label>
                 <Textarea
                   id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
                   rows={6}
-                  className="w-full bg-white/10 border-white/20 text-white placeholder-blue-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent backdrop-blur-sm resize-none"
+                  className="w-full bg-white border-slate-300 text-slate-900 placeholder-slate-500 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none"
                   placeholder="Tell me about your project or opportunity..."
                   required
                   data-testid="textarea-message"
@@ -213,7 +217,7 @@ export default function ContactSection() {
               <Button
                 type="submit"
                 disabled={contactMutation.isPending}
-                className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold hover:from-blue-600 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
                 data-testid="button-send-message"
               >
                 {contactMutation.isPending ? (

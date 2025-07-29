@@ -25,11 +25,11 @@ export default function Home() {
 
       navLinks.forEach(link => {
         const href = link.getAttribute('href');
-        link.classList.remove('text-blue-600', 'font-semibold');
-        link.classList.add('text-slate-700');
+        link.classList.remove('text-blue-400', 'font-semibold');
+        link.classList.add('text-slate-300');
         if (href === `#${current}`) {
-          link.classList.remove('text-slate-700');
-          link.classList.add('text-blue-600', 'font-semibold');
+          link.classList.remove('text-slate-300');
+          link.classList.add('text-blue-400', 'font-semibold');
         }
       });
     };

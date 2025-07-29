@@ -22,11 +22,11 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-slate-200">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-950/95 backdrop-blur-xl border-b border-slate-800/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <span className="text-xl font-bold gradient-text">{portfolioData.name}</span>
+            <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">{portfolioData.name}</span>
           </div>
           
           <div className="hidden md:block">
@@ -35,7 +35,7 @@ export default function Navigation() {
                 <button
                   key={item.href}
                   onClick={() => handleNavClick(item.href)}
-                  className="nav-link text-slate-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                  className="nav-link text-slate-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
                   data-testid={`nav-link-${item.label.toLowerCase()}`}
                 >
                   {item.label}
@@ -47,7 +47,7 @@ export default function Navigation() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-slate-700 hover:text-blue-600 focus:outline-none"
+              className="text-slate-300 hover:text-blue-400 focus:outline-none"
               data-testid="mobile-menu-button"
             >
               {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -58,13 +58,13 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white border-t border-slate-200">
+        <div className="md:hidden bg-slate-950/95 border-t border-slate-800/50">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
               <button
                 key={item.href}
                 onClick={() => handleNavClick(item.href)}
-                className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50 w-full text-left"
+                className="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-blue-400 hover:bg-slate-800/50 w-full text-left"
                 data-testid={`mobile-nav-link-${item.label.toLowerCase()}`}
               >
                 {item.label}

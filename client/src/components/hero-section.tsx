@@ -42,8 +42,17 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
-      <div className="absolute inset-0 bg-black/20"></div>
+    <section id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-950/20 via-transparent to-indigo-950/20"></div>
+      
+      {/* Geometric Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-10 w-2 h-2 bg-blue-400 rounded-full opacity-60"></div>
+        <div className="absolute top-40 right-20 w-1 h-1 bg-indigo-400 rounded-full opacity-80"></div>
+        <div className="absolute bottom-32 left-20 w-3 h-3 bg-purple-400 rounded-full opacity-40"></div>
+        <div className="absolute top-60 left-1/3 w-px h-20 bg-gradient-to-b from-blue-400/40 to-transparent rotate-45"></div>
+        <div className="absolute bottom-40 right-1/3 w-px h-16 bg-gradient-to-b from-indigo-400/40 to-transparent -rotate-45"></div>
+      </div>
       
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -249,38 +258,7 @@ export default function HeroSection() {
           </motion.div>
         </div>
 
-        {/* Contact Info Cards - Moved below main content */}
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-20"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
-        >
-          <motion.div 
-            className="glass-card rounded-xl p-6 hover:bg-white/20 transition-all duration-300 group"
-            whileHover={{ scale: 1.05, y: -5 }}
-          >
-            <MapPin className="w-8 h-8 text-blue-300 mb-3 mx-auto group-hover:scale-110 transition-transform duration-300" />
-            <p className="text-white font-medium">Location</p>
-            <p className="text-slate-300 text-sm">{portfolioData.location}</p>
-          </motion.div>
-          <motion.div 
-            className="glass-card rounded-xl p-6 hover:bg-white/20 transition-all duration-300 group"
-            whileHover={{ scale: 1.05, y: -5 }}
-          >
-            <Mail className="w-8 h-8 text-blue-300 mb-3 mx-auto group-hover:scale-110 transition-transform duration-300" />
-            <p className="text-white font-medium">Email</p>
-            <p className="text-slate-300 text-sm">{portfolioData.email}</p>
-          </motion.div>
-          <motion.div 
-            className="glass-card rounded-xl p-6 hover:bg-white/20 transition-all duration-300 group"
-            whileHover={{ scale: 1.05, y: -5 }}
-          >
-            <Phone className="w-8 h-8 text-blue-300 mb-3 mx-auto group-hover:scale-110 transition-transform duration-300" />
-            <p className="text-white font-medium">Phone</p>
-            <p className="text-slate-300 text-sm">{portfolioData.phone}</p>
-          </motion.div>
-        </motion.div>
+
       </div>
 
       {/* Scroll Indicator */}

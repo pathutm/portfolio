@@ -4,7 +4,10 @@ import { motion } from "framer-motion";
 
 export default function ExperienceSection() {
   return (
-    <section id="experience" className="py-20 bg-white">
+    <section id="experience" className="py-20 bg-gradient-to-br from-white via-slate-50 to-blue-50/30 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute top-32 left-16 w-20 h-20 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-full blur-2xl opacity-40"></div>
+      <div className="absolute bottom-40 right-24 w-16 h-16 bg-gradient-to-br from-purple-100 to-blue-100 rounded-full blur-xl opacity-30"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
