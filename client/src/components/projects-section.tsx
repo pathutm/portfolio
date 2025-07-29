@@ -1,33 +1,85 @@
 import { portfolioData } from "@/data/portfolio-data";
-import { BarChart3, CheckCircle, Sprout, ArrowRight } from "lucide-react";
+import { BarChart3, CheckCircle, Sprout, ArrowRight, ExternalLink } from "lucide-react";
+import { motion } from "framer-motion";
+import { SiReact, SiDocker, SiAmazon, SiPython, SiJavascript } from "react-icons/si";
+import { FaRobot, FaLeaf } from "react-icons/fa";
 
 const iconMap = {
   "chart-bar": BarChart3,
   "check-circle": CheckCircle,
-  "seedling": Sprout,
+  "seedling": FaLeaf,
 };
 
 export default function ProjectsSection() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.2,
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 30, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
-    <section id="projects" className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 animate-slide-up">
+    <section id="projects" className="py-20 bg-gradient-to-br from-slate-50 to-blue-50 relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_1px_1px,_rgb(0_0_0)_1px,_transparent_0)] bg-[length:50px_50px]"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Featured Projects</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 mx-auto mb-8"></div>
+          <motion.div 
+            className="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 mx-auto mb-8"
+            initial={{ width: 0 }}
+            whileInView={{ width: "6rem" }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          />
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             Showcasing innovative solutions that blend AI, automation, and scalable engineering
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <motion.div 
+          className="grid grid-cols-1 lg:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           {portfolioData.projects.map((project, index) => {
             const IconComponent = iconMap[project.icon as keyof typeof iconMap];
             
             return (
-              <div
+              <motion.div
                 key={index}
-                className="project-card bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group hover:-translate-y-2"
+                className="project-card bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group"
                 data-testid={`project-card-${index}`}
+                variants={itemVariants}
+                whileHover={{ y: -10, scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
               >
                 <div className={`h-48 bg-gradient-to-br from-${project.color}-500 to-${project.color === 'blue' ? 'indigo' : project.color === 'emerald' ? 'teal' : 'orange'}-600 relative overflow-hidden`}
                      style={{
@@ -67,25 +119,35 @@ export default function ProjectsSection() {
                     ))}
                   </div>
                   <div className="flex items-center justify-between">
-                    <button className={`text-${project.color}-600 hover:text-${project.color}-800 font-medium flex items-center group`}
-                            style={{
-                              color: project.color === 'blue' ? 'rgb(37 99 235)' :
-                                    project.color === 'emerald' ? 'rgb(5 150 105)' :
-                                    'rgb(217 119 6)'
-                            }}>
+                    <motion.button 
+                      className="font-medium flex items-center group"
+                      style={{
+                        color: project.color === 'blue' ? 'rgb(37 99 235)' :
+                              project.color === 'emerald' ? 'rgb(5 150 105)' :
+                              'rgb(217 119 6)'
+                      }}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
                       Learn More <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
-                    </button>
+                    </motion.button>
                     {project.award && (
-                      <span className="text-xs bg-gradient-to-r from-amber-500 to-orange-500 text-white px-2 py-1 rounded-full">
+                      <motion.span 
+                        className="text-xs bg-gradient-to-r from-amber-500 to-orange-500 text-white px-2 py-1 rounded-full"
+                        initial={{ scale: 0 }}
+                        whileInView={{ scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.3, delay: 0.2 }}
+                      >
                         {project.award}
-                      </span>
+                      </motion.span>
                     )}
                   </div>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

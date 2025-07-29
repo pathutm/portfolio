@@ -22,11 +22,13 @@ The application follows a monorepo structure with clear separation between clien
 ## Key Components
 
 ### Frontend Architecture
-- **Component Structure**: Uses shadcn/ui components with Radix UI primitives
-- **Styling**: Tailwind CSS with CSS variables for theming (light/dark mode support)
+- **Component Structure**: Uses shadcn/ui components with Radix UI primitives, enhanced with Framer Motion animations
+- **Styling**: Tailwind CSS with CSS variables for theming and custom animations
 - **State Management**: React Query for API calls and caching
 - **Routing**: Single page application with smooth scrolling navigation
 - **Forms**: React Hook Form with Zod validation
+- **Animations**: Framer Motion for smooth, professional animations and micro-interactions
+- **Icons**: React Icons library for consistent, modern iconography
 
 ### Backend Architecture
 - **API Layer**: Express.js with TypeScript

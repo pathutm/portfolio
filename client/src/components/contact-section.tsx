@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { portfolioData } from "@/data/portfolio-data";
-import { Mail, Phone, MapPin, Linkedin, Github, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
@@ -117,24 +119,28 @@ export default function ContactSection() {
             <div className="mt-8">
               <h4 className="text-lg font-semibold text-white mb-4">Connect on Social</h4>
               <div className="flex space-x-4">
-                <a
+                <motion.a
                   href={portfolioData.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                  className="w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition-all duration-300"
                   data-testid="link-linkedin-contact"
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  <Linkedin className="text-white w-6 h-6" />
-                </a>
-                <a
+                  <FaLinkedin className="text-white w-6 h-6" />
+                </motion.a>
+                <motion.a
                   href={portfolioData.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-gray-700 hover:bg-gray-800 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                  className="w-12 h-12 bg-gray-700 hover:bg-gray-800 rounded-full flex items-center justify-center transition-all duration-300"
                   data-testid="link-github-contact"
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  <Github className="text-white w-6 h-6" />
-                </a>
+                  <FaGithub className="text-white w-6 h-6" />
+                </motion.a>
               </div>
             </div>
           </div>

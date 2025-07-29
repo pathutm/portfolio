@@ -108,4 +108,29 @@
   .skill-badge {
     @apply px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105;
   }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .rotate-y-6 {
+    transform: rotateY(6deg);
+  }
+
+  .hover-rotate-y-0:hover {
+    transform: rotateY(0deg);
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { 
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+    }
+    50% { 
+      box-shadow: 0 0 40px rgba(59, 130, 246, 0.8), 0 0 60px rgba(59, 130, 246, 0.6);
+    }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
 }
