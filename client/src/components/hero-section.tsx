@@ -320,39 +320,49 @@ export default function HeroSection() {
                 </div>
               </motion.div>
 
-              {/* Orbiting Elements */}
+              {/* Organized Skill Icons - Better positioning */}
               {[
-                { icon: FaCode, color: "from-blue-400 to-blue-600", delay: 0, radius: 80 },
-                { icon: Database, color: "from-indigo-400 to-indigo-600", delay: 2, radius: 90 },
-                { icon: FaServer, color: "from-purple-400 to-purple-600", delay: 4, radius: 70 },
-                { icon: Cpu, color: "from-emerald-400 to-emerald-600", delay: 1, radius: 100 },
-                { icon: FaCloud, color: "from-cyan-400 to-cyan-600", delay: 3, radius: 60 },
-                { icon: Zap, color: "from-amber-400 to-amber-600", delay: 5, radius: 110 }
+                { icon: FaCode, color: "from-blue-400 to-blue-600", angle: 0, radius: 80, label: "Frontend" },
+                { icon: Database, color: "from-indigo-400 to-indigo-600", angle: Math.PI/3, radius: 85, label: "Database" },
+                { icon: FaServer, color: "from-purple-400 to-purple-600", angle: 2*Math.PI/3, radius: 75, label: "Backend" },
+                { icon: Cpu, color: "from-emerald-400 to-emerald-600", angle: Math.PI, radius: 90, label: "AI/ML" },
+                { icon: FaCloud, color: "from-cyan-400 to-cyan-600", angle: 4*Math.PI/3, radius: 70, label: "Cloud" },
+                { icon: Zap, color: "from-amber-400 to-amber-600", angle: 5*Math.PI/3, radius: 95, label: "Performance" }
               ].map((item, index) => {
                 const IconComponent = item.icon;
                 return (
                   <motion.div
                     key={index}
-                    className={`absolute w-12 h-12 rounded-lg bg-gradient-to-br ${item.color} shadow-lg flex items-center justify-center backdrop-blur-sm border border-white/20`}
+                    className={`absolute w-14 h-14 rounded-xl bg-gradient-to-br ${item.color} shadow-xl flex items-center justify-center backdrop-blur-sm border-2 border-white/30 hover:border-white/60 transition-all duration-300`}
+                    style={{
+                      left: '50%',
+                      top: '50%',
+                      transform: 'translate(-50%, -50%)'
+                    }}
                     animate={{
-                      rotate: [0, 360],
                       x: [
-                        Math.cos((item.delay * Math.PI) / 3) * item.radius,
-                        Math.cos(((item.delay + 6) * Math.PI) / 3) * item.radius,
+                        Math.cos(item.angle) * item.radius,
+                        Math.cos(item.angle + 2*Math.PI) * item.radius
                       ],
                       y: [
-                        Math.sin((item.delay * Math.PI) / 3) * item.radius,
-                        Math.sin(((item.delay + 6) * Math.PI) / 3) * item.radius,
-                      ]
+                        Math.sin(item.angle) * item.radius,
+                        Math.sin(item.angle + 2*Math.PI) * item.radius
+                      ],
+                      rotate: [0, 360]
                     }}
                     transition={{
-                      duration: 12 + index * 2,
+                      duration: 15 + index,
                       repeat: Infinity,
                       ease: "linear"
                     }}
-                    whileHover={{ scale: 1.2, zIndex: 10 }}
+                    whileHover={{ 
+                      scale: 1.3, 
+                      zIndex: 10,
+                      boxShadow: "0 20px 40px rgba(59, 130, 246, 0.3)"
+                    }}
+                    title={item.label}
                   >
-                    <IconComponent className="w-5 h-5 text-white" />
+                    <IconComponent className="w-6 h-6 text-white" />
                   </motion.div>
                 );
               })}
@@ -394,37 +404,39 @@ export default function HeroSection() {
                 </svg>
               </motion.div>
 
-              {/* Floating Particles */}
-              {[...Array(15)].map((_, i) => (
+              {/* Organized Floating Particles */}
+              {[...Array(8)].map((_, i) => (
                 <motion.div
                   key={i}
-                  className="absolute w-2 h-2 bg-blue-400/60 rounded-full"
+                  className="absolute w-3 h-3 bg-gradient-to-br from-blue-400/60 to-indigo-400/60 rounded-full"
                   style={{
-                    left: `${20 + Math.random() * 60}%`,
-                    top: `${20 + Math.random() * 60}%`,
+                    left: `${30 + (i % 4) * 15}%`,
+                    top: `${25 + Math.floor(i / 4) * 30}%`,
                   }}
                   animate={{
-                    y: [0, -20, 0],
-                    opacity: [0.2, 1, 0.2],
-                    scale: [0.5, 1, 0.5]
+                    y: [0, -15, 0],
+                    opacity: [0.3, 0.8, 0.3],
+                    scale: [0.7, 1.2, 0.7]
                   }}
                   transition={{
-                    duration: 3 + Math.random() * 2,
+                    duration: 4 + (i * 0.5),
                     repeat: Infinity,
-                    delay: Math.random() * 3,
+                    delay: i * 0.5,
+                    ease: "easeInOut"
                   }}
                 />
               ))}
 
-              {/* Floating Decorative Elements - Positioned outside the main container */}
+              {/* Corner Decorative Elements - Properly positioned */}
               <motion.div 
-                className="absolute top-8 right-8 w-12 h-12 bg-amber-400/80 rounded-full flex items-center justify-center shadow-lg"
+                className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center shadow-xl border-2 border-white/20"
                 animate={{
                   y: [0, -8, 0],
-                  rotate: [0, 180, 360]
+                  rotate: [0, 180, 360],
+                  scale: [1, 1.1, 1]
                 }}
                 transition={{
-                  duration: 4,
+                  duration: 5,
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
@@ -433,13 +445,13 @@ export default function HeroSection() {
               </motion.div>
               
               <motion.div 
-                className="absolute bottom-8 left-8 w-10 h-10 bg-emerald-400/80 rounded-full flex items-center justify-center shadow-lg"
+                className="absolute -bottom-4 -left-4 w-10 h-10 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-full flex items-center justify-center shadow-xl border-2 border-white/20"
                 animate={{
-                  scale: [1, 1.15, 1],
+                  scale: [1, 1.2, 1],
                   rotate: [0, -180, -360]
                 }}
                 transition={{
-                  duration: 3,
+                  duration: 4,
                   repeat: Infinity,
                   ease: "easeInOut",
                   delay: 1

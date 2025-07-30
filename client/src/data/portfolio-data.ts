@@ -29,13 +29,13 @@ export const portfolioData = {
       color: "purple"
     },
     {
-      category: "Development & AI",
-      items: ["Node.js, Express.js, React.js (MERN)", "LangChain, Gemini, n8n", "Python, JavaScript"],
+      category: "AI/ML & Development",
+      items: ["AI/ML", "MERN Stack (MongoDB, Express, React, Node.js)", "LangChain", "Python, JavaScript"],
       color: "blue"
     },
     {
       category: "Cloud & DevOps",
-      items: ["AWS, Docker, MongoDB"],
+      items: ["AWS", "Docker", "MongoDB"],
       color: "emerald"
     }
   ],
