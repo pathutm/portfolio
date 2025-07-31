@@ -45,13 +45,13 @@ export default function HeroSection() {
   return (
     <section id="home" className="relative h-screen flex items-center justify-center bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-950/20 via-transparent to-indigo-950/20"></div>
-      
+
       {/* Advanced Background Animation */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Floating Tech Icons */}
         <motion.div
           className="absolute top-20 left-20"
-          animate={{ 
+          animate={{
             y: [0, -20, 0],
             rotate: [0, 180, 360],
             scale: [1, 1.2, 1]
@@ -60,10 +60,10 @@ export default function HeroSection() {
         >
           <FaCode className="text-blue-400/30 text-4xl" />
         </motion.div>
-        
+
         <motion.div
           className="absolute top-40 right-32"
-          animate={{ 
+          animate={{
             y: [0, 25, 0],
             rotate: [0, -180, -360],
             scale: [1, 0.8, 1]
@@ -72,10 +72,10 @@ export default function HeroSection() {
         >
           <Database className="text-indigo-400/30 text-3xl" />
         </motion.div>
-        
+
         <motion.div
           className="absolute bottom-32 left-32"
-          animate={{ 
+          animate={{
             x: [0, 20, 0],
             y: [0, -15, 0],
             rotate: [0, 90, 180]
@@ -84,10 +84,10 @@ export default function HeroSection() {
         >
           <FaServer className="text-emerald-400/30 text-3xl" />
         </motion.div>
-        
+
         <motion.div
           className="absolute top-1/2 right-20"
-          animate={{ 
+          animate={{
             scale: [1, 1.5, 1],
             opacity: [0.3, 0.6, 0.3]
           }}
@@ -95,7 +95,7 @@ export default function HeroSection() {
         >
           <Brain className="text-purple-400/30 text-5xl" />
         </motion.div>
-        
+
         {/* Animated Particles */}
         {[...Array(20)].map((_, i) => (
           <motion.div
@@ -117,9 +117,9 @@ export default function HeroSection() {
             }}
           />
         ))}
-        
+
         {/* Gradient Orbs */}
-        <motion.div 
+        <motion.div
           className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
@@ -131,7 +131,7 @@ export default function HeroSection() {
             ease: "linear"
           }}
         />
-        <motion.div 
+        <motion.div
           className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-indigo-500/10 to-cyan-500/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 0.8, 1],
@@ -148,7 +148,7 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full py-20">
           {/* Left Column - Animated Text Content */}
-          <motion.div 
+          <motion.div
             className="text-center lg:text-left"
             variants={containerVariants}
             initial="hidden"
@@ -159,7 +159,7 @@ export default function HeroSection() {
               className="mb-8"
               variants={itemVariants}
             >
-              <motion.div 
+              <motion.div
                 className="inline-flex items-center space-x-2 bg-blue-500/10 backdrop-blur-sm border border-blue-500/20 rounded-full px-4 py-2 mb-6"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -167,9 +167,9 @@ export default function HeroSection() {
                 <Rocket className="text-blue-400 w-4 h-4" />
                 <span className="text-blue-300 text-sm font-medium">Ready to Innovate</span>
               </motion.div>
-              
-              <div className="text-blue-400 text-xl font-medium mb-4">I am a</div>
-              
+
+              <div className="text-blue-400 text-xl font-medium mb-4">I am  </div>
+
               {/* Main Animated Title */}
               <div className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                 <div className="relative inline-block">
@@ -191,17 +191,16 @@ export default function HeroSection() {
                   />
                 </div>
               </div>
-              
+
               {/* Typewriter Effect for Role */}
               <div className="text-2xl md:text-3xl text-slate-300 font-light mb-6 h-12">
                 <Typewriter
                   options={{
                     strings: [
                       'Agentic AI Innovator',
-                      'Backend Developer', 
+                      'Backend Developer',
                       'Project Management Officer',
-                      'Full-Stack Engineer',
-                      'AI Solution Architect'
+                      'AI Solutions Architect'
                     ],
                     autoStart: true,
                     loop: true,
@@ -210,27 +209,33 @@ export default function HeroSection() {
                   }}
                 />
               </div>
-              
-              <motion.div 
+
+              <motion.div
                 className="text-lg text-slate-400 max-w-2xl leading-relaxed mb-8"
                 variants={itemVariants}
               >
-                Enhancing digital experiences that are <span className="text-blue-400 font-semibold">smooth</span>, 
-                <span className="text-purple-400 font-semibold"> scalable</span>, and made to 
-                <span className="text-indigo-400 font-semibold"> impress</span>.
+                Driving <span className="text-blue-400 font-semibold">intelligent</span>,
+                <span className="text-purple-400 font-semibold"> efficient</span>, and
+                <span className="text-indigo-400 font-semibold"> impact-driven</span> products by blending
+                <span className="text-blue-400 font-semibold"> Agentic AI</span>,
+                <span className="text-purple-400 font-semibold"> System Design</span>, and
+                <span className="text-indigo-400 font-semibold"> execution excellence</span>.
               </motion.div>
-              
+
+
+
+
               {/* Interactive Skills Pills */}
-              <motion.div 
+              <motion.div
                 className="flex flex-wrap gap-2 mb-6"
                 variants={itemVariants}
               >
-                {['AI/ML', 'MERN Stack', 'AWS', 'Docker', 'LangChain'].map((skill, index) => (
+                {['Project Management', 'Agentic AI', 'MERN Stack', 'AWS', 'Docker', 'LangChain'].map((skill, index) => (
                   <motion.span
                     key={skill}
                     className="px-3 py-1 bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm border border-slate-600/30 rounded-full text-slate-300 text-xs font-medium"
-                    whileHover={{ 
-                      scale: 1.05, 
+                    whileHover={{
+                      scale: 1.05,
                       backgroundColor: "rgba(59, 130, 246, 0.1)",
                       borderColor: "rgba(59, 130, 246, 0.3)"
                     }}
@@ -283,7 +288,9 @@ export default function HeroSection() {
               >
                 CONTACT ME
               </motion.button>
-              <motion.button
+              <motion.a
+                href="/Resume/Pathu.T_resume.pdf"
+                download="Pathu.T_resume.pdf"
                 className="border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 hover:border-white/50 flex items-center justify-center"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
@@ -291,16 +298,17 @@ export default function HeroSection() {
               >
                 <Download className="mr-2 w-5 h-5" />
                 DOWNLOAD MY RESUME
-              </motion.button>
+              </motion.a>
             </motion.div>
+            
           </motion.div>
 
           {/* Right Column - 3D Visual Animation */}
-          <motion.div 
+          <motion.div
             className="flex justify-center lg:justify-end relative"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.5 }}
+            transition={{ duration: 1, delay: 0.5 }}                                      
           >
             <div className="relative w-80 h-80 flex items-center justify-center">
               {/* Central Core */}
@@ -323,11 +331,11 @@ export default function HeroSection() {
               {/* Organized Skill Icons - Better positioning */}
               {[
                 { icon: FaCode, color: "from-blue-400 to-blue-600", angle: 0, radius: 80, label: "Frontend" },
-                { icon: Database, color: "from-indigo-400 to-indigo-600", angle: Math.PI/3, radius: 85, label: "Database" },
-                { icon: FaServer, color: "from-purple-400 to-purple-600", angle: 2*Math.PI/3, radius: 75, label: "Backend" },
+                { icon: Database, color: "from-indigo-400 to-indigo-600", angle: Math.PI / 3, radius: 85, label: "Database" },
+                { icon: FaServer, color: "from-purple-400 to-purple-600", angle: 2 * Math.PI / 3, radius: 75, label: "Backend" },
                 { icon: Cpu, color: "from-emerald-400 to-emerald-600", angle: Math.PI, radius: 90, label: "AI/ML" },
-                { icon: FaCloud, color: "from-cyan-400 to-cyan-600", angle: 4*Math.PI/3, radius: 70, label: "Cloud" },
-                { icon: Zap, color: "from-amber-400 to-amber-600", angle: 5*Math.PI/3, radius: 95, label: "Performance" }
+                { icon: FaCloud, color: "from-cyan-400 to-cyan-600", angle: 4 * Math.PI / 3, radius: 70, label: "Cloud" },
+                { icon: Zap, color: "from-amber-400 to-amber-600", angle: 5 * Math.PI / 3, radius: 95, label: "Performance" }
               ].map((item, index) => {
                 const IconComponent = item.icon;
                 return (
@@ -342,11 +350,11 @@ export default function HeroSection() {
                     animate={{
                       x: [
                         Math.cos(item.angle) * item.radius,
-                        Math.cos(item.angle + 2*Math.PI) * item.radius
+                        Math.cos(item.angle + 2 * Math.PI) * item.radius
                       ],
                       y: [
                         Math.sin(item.angle) * item.radius,
-                        Math.sin(item.angle + 2*Math.PI) * item.radius
+                        Math.sin(item.angle + 2 * Math.PI) * item.radius
                       ],
                       rotate: [0, 360]
                     }}
@@ -355,8 +363,8 @@ export default function HeroSection() {
                       repeat: Infinity,
                       ease: "linear"
                     }}
-                    whileHover={{ 
-                      scale: 1.3, 
+                    whileHover={{
+                      scale: 1.3,
                       zIndex: 10,
                       boxShadow: "0 20px 40px rgba(59, 130, 246, 0.3)"
                     }}
@@ -428,7 +436,7 @@ export default function HeroSection() {
               ))}
 
               {/* Corner Decorative Elements - Properly positioned */}
-              <motion.div 
+              <motion.div
                 className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center shadow-xl border-2 border-white/20"
                 animate={{
                   y: [0, -8, 0],
@@ -443,8 +451,8 @@ export default function HeroSection() {
               >
                 <span className="text-lg">🚀</span>
               </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 className="absolute -bottom-4 -left-4 w-10 h-10 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-full flex items-center justify-center shadow-xl border-2 border-white/20"
                 animate={{
                   scale: [1, 1.2, 1],
@@ -467,7 +475,7 @@ export default function HeroSection() {
       </div>
 
       {/* Scroll Indicator */}
-      <motion.div 
+      <motion.div
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}

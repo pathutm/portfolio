@@ -135,7 +135,7 @@ export default function ProjectsSection() {
                       </span>
                     ))}
                   </div>
-                  <div className="flex items-center justify-between">
+                  {/* <div className="flex items-center justify-between">
                     <motion.button 
                       className="font-medium flex items-center group"
                       style={{
@@ -159,7 +159,7 @@ export default function ProjectsSection() {
                         {project.award}
                       </motion.span>
                     )}
-                  </div>
+                  </div> */}
                 </div>
               </motion.div>
             );

@@ -1,6 +1,6 @@
 export const portfolioData = {
   name: "Pathu T",
-  title: "PMO",
+  title: "Pathu T",
   roleTitle: "Agentic AI Innovator, Backend Developer",
   location: "Coimbatore, Tamil Nadu, India",
   email: "pathuthangamuthu@gmail.com",
@@ -30,7 +30,7 @@ export const portfolioData = {
     },
     {
       category: "AI/ML & Development",
-      items: ["AI/ML", "MERN Stack (MongoDB, Express, React, Node.js)", "LangChain", "Python, JavaScript"],
+      items: ["AI/ML", "MERN Stack (MongoDB, Express, React, Node.js)", "Agentic AI", "Python, JavaScript"],
       color: "blue"
     },
     {
@@ -56,12 +56,11 @@ export const portfolioData = {
       icon: "check-circle"
     },
     {
-      title: "Smart Irrigation System",
-      description: "Published paper on smart irrigation and fertigation using soil and plant data. Won Best Paper Award at GENESIS'2k22.",
-      tags: ["IoT", "Agriculture", "Research"],
+      title: "15+ Agentic AI Projects",
+      description: "Built and deployed 15+ Agentic AI systems using reflection patterns and modular agents. Integrated tools like LangChain, LangGraph, CrewAI, and n8n for dynamic goal-driven automation",
+      tags: ["Agentic AI", "LangChain", "LangGraph", "CrewAI", "n8n", ],
       color: "amber",
       icon: "seedling",
-      award: "🏆 Award Winner"
     }
   ],
 
@@ -71,7 +70,7 @@ export const portfolioData = {
       company: "SNS InnovationHub",
       date: "Aug 2024 – Present",
       description: [
-        "Managed teams and product lifecycles",
+        "Worked with teams and AI product lifecycles",
         "Developed Agentic AI-powered web apps",
         "Led backend microservices and deployment (Docker + AWS)",
         "Oversaw system design and LLM-based automation (n8n, LangChain)"
@@ -83,7 +82,7 @@ export const portfolioData = {
       company: "Southern Railways",
       date: "Jul 2023 – Aug 2023",
       description: [
-        "Worked as Technical Management Lead on 3 major signal projects",
+        "Worked as Technical development and Management  on 3 major signal projects",
         "Involved in RRI, continuous track circuiting, and control panel systems"
       ],
       color: "emerald"
