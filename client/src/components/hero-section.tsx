@@ -197,10 +197,7 @@ export default function HeroSection() {
                 <Typewriter
                   options={{
                     strings: [
-                      'Agentic AI Innovator',
-                      'Backend Developer',
-                      'Project Management Officer',
-                      'AI Solutions Architect'
+                      'Full Stack Developer',
                     ],
                     autoStart: true,
                     loop: true,
@@ -209,19 +206,11 @@ export default function HeroSection() {
                   }}
                 />
               </div>
-
-              <motion.div
-                className="text-lg text-slate-400 max-w-2xl leading-relaxed mb-8"
-                variants={itemVariants}
-              >
-                Driving <span className="text-blue-400 font-semibold">intelligent</span>,
-                <span className="text-purple-400 font-semibold"> efficient</span>, and
-                <span className="text-indigo-400 font-semibold"> impact-driven</span> products by blending
-                <span className="text-blue-400 font-semibold"> Agentic AI</span>,
-                <span className="text-purple-400 font-semibold"> System Design</span>, and
-                <span className="text-indigo-400 font-semibold"> execution excellence</span>.
+              <motion.div className="text-lg text-slate-400 max-w-2xl leading-relaxed mb-8" variants={itemVariants}>
+                Turning ideas into <span className="text-blue-400 font-semibold">action</span> with a passion for
+                <span className="text-purple-400 font-semibold"> coding </span> and
+                <span className="text-indigo-400 font-semibold"> development</span>.
               </motion.div>
-
 
 
 
@@ -230,23 +219,32 @@ export default function HeroSection() {
                 className="flex flex-wrap gap-2 mb-6"
                 variants={itemVariants}
               >
-                {['Project Management', 'Agentic AI', 'MERN Stack', 'AWS', 'Docker', 'LangChain'].map((skill, index) => (
-                  <motion.span
-                    key={skill}
-                    className="px-3 py-1 bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm border border-slate-600/30 rounded-full text-slate-300 text-xs font-medium"
-                    whileHover={{
-                      scale: 1.05,
-                      backgroundColor: "rgba(59, 130, 246, 0.1)",
-                      borderColor: "rgba(59, 130, 246, 0.3)"
-                    }}
-                    whileTap={{ scale: 0.95 }}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1 + index * 0.1 }}
-                  >
-                    {skill}
-                  </motion.span>
-                ))}
+                {['Full Stack Development',
+                  'React.js',
+                  'Node.js',
+                  'MongoDB',
+                  'FastAPI',
+                  'Gen AI',
+                  'Agentic AI',
+                  'AWS (S3, Lambda)',
+                  'n8n Automation',
+                  'API Integration'].map((skill, index) => (
+                    <motion.span
+                      key={skill}
+                      className="px-3 py-1 bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm border border-slate-600/30 rounded-full text-slate-300 text-xs font-medium"
+                      whileHover={{
+                        scale: 1.05,
+                        backgroundColor: "rgba(59, 130, 246, 0.1)",
+                        borderColor: "rgba(59, 130, 246, 0.3)"
+                      }}
+                      whileTap={{ scale: 0.95 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 1 + index * 0.1 }}
+                    >
+                      {skill}
+                    </motion.span>
+                  ))}
               </motion.div>
             </motion.div>
 
@@ -300,7 +298,7 @@ export default function HeroSection() {
                 DOWNLOAD MY RESUME
               </motion.a>
             </motion.div>
-            
+
           </motion.div>
 
           {/* Right Column - 3D Visual Animation */}
@@ -308,7 +306,7 @@ export default function HeroSection() {
             className="flex justify-center lg:justify-end relative"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.5 }}                                      
+            transition={{ duration: 1, delay: 0.5 }}
           >
             <div className="relative w-80 h-80 flex items-center justify-center">
               {/* Central Core */}

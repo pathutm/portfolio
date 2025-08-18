@@ -61,8 +61,20 @@ export default function EducationSection() {
                     {cert.issuer}
                   </p>
                   <p className="text-slate-400 text-xs">
-                    {cert.date}{cert.expires && ` - ${cert.expires}`}
+                    {cert.date}
                   </p>
+                   {cert.credentialUrl && (
+  <a
+    href={cert.credentialUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-2 mt-7 text-sm font-semibold text-blue-800 bg-blue-100 hover:bg-blue-200 transition px-2 py-1 rounded-lg shadow-sm"
+  >
+    View Certificate
+    
+    <span className="text-base">↗</span>
+  </a>
+)}
                 </div>
               ))}
             </div>
@@ -70,7 +82,7 @@ export default function EducationSection() {
         </div>
 
         {/* Achievements Section */}
-        <div className="mt-20 animate-slide-up">
+        {/* <div className="mt-20 animate-slide-up">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Achievements & Recognition</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -87,7 +99,7 @@ export default function EducationSection() {
               );
             })}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

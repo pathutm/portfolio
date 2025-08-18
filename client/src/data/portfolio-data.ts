@@ -1,18 +1,18 @@
 export const portfolioData = {
-  name: "Pathu T",
-  title: "Pathu T",
-  roleTitle: "Agentic AI Innovator, Backend Developer",
+  name: "",
+  title: "Jeba angelline mary M",
+  roleTitle: "Full stack developer",
   location: "Coimbatore, Tamil Nadu, India",
-  email: "pathuthangamuthu@gmail.com",
-  phone: "+91 9524214194",
-  linkedin: "https://www.linkedin.com/in/pathu-t",
-  github: "https://github.com/PathuT",
+  email: "angellinejeba@gmail.com",
+  phone: "+91 6384679360",
+  linkedin: "https://www.linkedin.com/in/m-jeba-angelline-mary-20ec035/",
+  github: "https://github.com/jeba-angelline-mary-03",
 
   about: {
     summary: [
-      "I'm a recent B.E. graduate in Electrical, Electronics, and Communication Engineering from SNS College of Technology with 11+ months of hands-on experience in backend development, Agentic AI, DevOps, and full-stack product launches.",
-      "I've led cross-functional teams, built and deployed 45+ APIs, and worked with LLMs like LangChain and Gemini. I've managed automation pipelines using n8n and deployed scalable systems on AWS using Docker.",
-      "I'm now aiming for Program and Product Management roles that intersect with technology, where I can align people, products, and processes to deliver high-impact solutions."
+      "I'm a Full Stack Developer with 1 year of experience at SNS Innovation Hub, where I contributed to domain-driven products in education and automation.",
+      "I’ve worked across the MERN stack, integrated Gen AI and Agentic AI models, automated workflows with n8n, and deployed scalable systems using AWS Lambda and S3.",
+      "I’m quick to adapt, passionate about solving real-world problems, and always eager to learn technologies that create meaningful impact."
     ],
     stats: [
       { value: "45+", label: "APIs Deployed" },
@@ -24,145 +24,117 @@ export const portfolioData = {
 
   skills: [
     {
-      category: "Management & Leadership",
-      items: ["Project Management (Agile, Scrum, Sprint Planning)", "ClickUp, Google Sheets", "People & Team Management", "Documentation & Process Optimization"],
+      category: "Frontend Development",
+      items: ["React.js", "Component-Based UI Design"],
       color: "purple"
     },
     {
-      category: "AI/ML & Development",
-      items: ["AI/ML", "MERN Stack (MongoDB, Express, React, Node.js)", "Agentic AI", "Python, JavaScript"],
+      category: "Backend & API Development",
+      items: ["Node.js, Express.js", "MongoDB", "FastAPI (Python)", "RESTful API Design"],
       color: "blue"
     },
     {
+      category: "AI & Automation",
+      items: ["GenAI & Agentic AI", "AI Model Integrations", "n8n (Low-code Automation Workflows)"],
+      color: "emerald"
+    },
+    {
       category: "Cloud & DevOps",
-      items: ["AWS", "Docker", "MongoDB"],
+      items: ["AWS Lambda Functions", "Amazon S3 File Storage"],
       color: "emerald"
     }
   ],
 
   projects: [
-    {
-      title: "OKRION – AI-powered Data Platform",
-      description: "Built and launched an AI-powered platform for institutional performance tracking with planned NAAC integration. Developed backend, AI flows, and deployed using Docker + AWS.",
-      tags: ["AI/ML", "Docker", "AWS"],
+   {
+      title: "OKRION – AI-powered Data Platform V1",
+      description: "Built and deployed a full-stack AI-driven platform for institutional OKR tracking across students and faculty, including frontend, backend, AI, and AWS integration.",
+      tags: ["React.js", "Node.js", "MongoDB", "FastAPI", "AWS"],
       color: "blue",
       icon: "chart-bar"
     },
-    {
-      title: "LinkedIn & LeetCode Verification App",
-      description: "Led development of a GenAI web app for validating user submissions. Managed product roadmap, LLM integration (Gemini, LangGraph), and automation using n8n.",
-      tags: ["GenAI", "LangGraph", "n8n"],
+     {
+      title: "OKRION – AI-powered Data Platform V2",
+      description: "Improved UI/UX and automated internal workflows using n8n for seamless data collection and processing.",
+      tags: ["React.js", "n8n"],
       color: "emerald",
       icon: "check-circle"
     },
     {
       title: "15+ Agentic AI Projects",
-      description: "Built and deployed 15+ Agentic AI systems using reflection patterns and modular agents. Integrated tools like LangChain, LangGraph, CrewAI, and n8n for dynamic goal-driven automation",
-      tags: ["Agentic AI", "LangChain", "LangGraph", "CrewAI", "n8n", ],
+      description: "Completed 15+ hands-on automation and LLM projects with LangGraph and Gemini, focusing on full-stack AI workflows and real-time data solutions.",
+      tags: ["Langchain", "LangGraph", "FastAPI","Gemini API","Streamlit"],
       color: "amber",
-      icon: "seedling",
+      icon: "seedling"
     }
   ],
 
   experience: [
     {
-      role: "Product Intern",
+      role: "Junior software associate",
       company: "SNS InnovationHub",
-      date: "Aug 2024 – Present",
+      date: "July 2024 – Present",
       description: [
-        "Worked with teams and AI product lifecycles",
-        "Developed Agentic AI-powered web apps",
-        "Led backend microservices and deployment (Docker + AWS)",
-        "Oversaw system design and LLM-based automation (n8n, LangChain)"
+        "Led code reviews across full OKR-ion system.",
+        "Developed React UI with dynamic forms, submission controls and reusable components.",
+        "Built end-to-end backend APIs (Node.js, JWT auth, S3 upload handling).",
+        "Deployed Lambda functions to automate OKR submission and date handling"
       ],
       color: "blue"
-    },
-    {
-      role: "Signal & Telecom Intern",
-      company: "Southern Railways",
-      date: "Jul 2023 – Aug 2023",
-      description: [
-        "Worked as Technical development and Management  on 3 major signal projects",
-        "Involved in RRI, continuous track circuiting, and control panel systems"
-      ],
-      color: "emerald"
-    },
-    {
-      role: "Technical & Public Relations Intern",
-      company: "IIT Guwahati",
-      date: "Oct 2022 – Jan 2023",
-      description: [
-        "Streamlined virtual event requirement processes",
-        "Part of Technothlon organizing team (India's largest student contest)"
-      ],
-      color: "amber"
     }
   ],
 
+  
   education: [
     {
       degree: "B.E. Electronics and Communication Engineering (Hons)",
       institution: "SNS College of Technology",
       location: "Coimbatore, India",
-      date: "Nov 2021 – May 2025",
-      score: "CGPA: 8.59",
+      date: "July 2020 – May 2024",
+      score: "CGPA: 9.18",
       type: "cgpa"
     },
     {
       degree: "Higher Secondary Certificate (HSC)",
-      institution: "KG Matric Hr. Sec School",
-      date: "May 2021",
-      score: "89%",
+      institution: "Immaculate Heart of Mary Matriculation Higher Secondary School",
+      location: "Coimbatore, India",
+      date: "May 2020",
+      score: "77.83%",
       type: "percentage"
     },
     {
       degree: "Secondary School Leaving Certificate (SSLC)",
-      institution: "St. Antonys Matriculation School",
+      institution: "Immaculate Heart of Mary Matriculation Higher Secondary School",
+      location: "Coimbatore, India",
       date: "May 2019",
-      score: "81%",
+      score: "94.5%",
       type: "percentage"
     }
   ],
 
   certifications: [
-    {
-      title: "Procore Certified: Project Manager (Project Management)",
-      issuer: "Procore Technologies",
-      date: "Jun 2025",
-      credentialId: "m7iihdfqs6zp",
-      color: "blue"
-    },
-    {
-      title: "Academy Accreditation - Generative AI",
-      issuer: "Databricks",
-      date: "May 2025",
-      expires: "May 2027",
-      credentialId: "143071359",
-      color: "emerald"
-    },
-    {
-      title: "Data Landscape of GenAI for PMs",
-      issuer: "Project Management Institute",
-      date: "Dec 2024",
-      credentialId: "27576f9f-a0df-4cbd-99a3-135cfc8c70ba",
-      color: "purple"
-    },
-    {
-      title: "HackerRank Software Engineer Intern Certification",
-      issuer: "HackerRank",
-      date: "Nov 2024",
-      credentialId: "DB6A4C37761A",
-      color: "amber"
-    },
-    {
-      title: "edX Verified Certificate - Data Analytics on AWS",
-      issuer: "edX",
-      date: "Apr 2022",
-      credentialId: "f11682e824b3426498fec243834d88ef",
-      color: "indigo"
-    }
-  ],
-
+  {
+    title: "The Complete Full-Stack Web Development Bootcamp",
+    issuer: "Udemy",
+    date: "Jan 2024",
+    credentialUrl: "https://www.udemy.com/certificate/UC-6485e583-3e0d-40ad-860a-5c6db2a987f3/",
+    color: "blue"
+  },
+  {
+    title: "SaWiT.AI Challenge – Fundamentals of GenAI",
+    issuer: "GUVI",
+    date: "Sep 2024",
+    credentialUrl: "https://www.guvi.in/share-certificate/1Yc70W80CK373wP111",
+    color: "emerald"
+  },
+  {
+    title: "Generative AI – Advanced Concepts",
+    issuer: "GUVI",
+    date: "Oct 2024",
+    credentialUrl: "https://www.guvi.in/share-certificate/d30E0M9ky3z2474S12",
+    color: "purple"
+  }
+],
   achievements: [
     {
       title: "Spirit of Innovation Award",
